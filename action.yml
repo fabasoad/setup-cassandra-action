@@ -16,6 +16,10 @@ inputs:
     description: 'Cassandra password.'
     required: false
     default: ''
+  connect-timeout:
+    description: 'Connection timeout to Cassandra in seconds.'
+    required: false
+    default: 10
   keyspace:
     description: 'Cassandra keyspace. It will be created automatically in case it does not exist.'
     required: true
@@ -31,5 +35,6 @@ runs:
     - ${{ inputs.port }}
     - ${{ inputs.username }}
     - ${{ inputs.password }}
+    - ${{ inputs.connect-timeout }}
     - ${{ inputs.keyspace }}
     - ${{ inputs.scripts_path }}

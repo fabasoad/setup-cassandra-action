@@ -21,6 +21,10 @@ _[Optional]_ Cassandra username. Default `''`.
 
 _[Optional]_ Cassandra password. Default `''`.
 
+### `connect-timeout`
+
+_[Optional]_ Connection timeout to Cassandra in seconds. Default `10`.
+
 ### `keyspace`
 
 _[Required]_ Cassandra keyspace. Will be created automatically in case it does not exist.
@@ -50,6 +54,7 @@ jobs:
           port: 9042
           username: ${{ secrets.CASSANDRA_USERNAME }}
           password: ${{ secrets.CASSANDRA_PASSWORD }}
+          connect-timeout: 30
           keyspace: test
           scripts_path: './scripts'
 ```
