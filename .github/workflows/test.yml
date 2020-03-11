@@ -12,4 +12,5 @@ jobs:
         with:
           host: ${{ secrets.CASSANDRA_HOST }}
           keyspace: yf_delete
+          connect-timeout: 20
           scripts_path: './'
