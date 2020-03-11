@@ -14,14 +14,12 @@ then
 fi
 paramArray+=("--cqlversion=$CQLSH_VERSION")
 paramArray+=("--connect-timeout=$5")
-echo "CREATE KEYSPACE IF NOT EXISTS $6 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};" | cqlsh "${paramArray[@]}"
-if [[ $? -ne 0 ]]
+if ! echo "CREATE KEYSPACE IF NOT EXISTS $6 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};" | cqlsh "${paramArray[@]}"
 then
   exit 1
 fi
-for file_script in $7/*.cql; do
-  cqlsh -k $6 -f $file_script "${paramArray[@]}"
-  if [[ $? -ne 0 ]]
+for file_script in "$7"/*.cql; do
+  if ! cqlsh -k "$6" -f $file_script "${paramArray[@]}"
   then
     exit 1
   fi
