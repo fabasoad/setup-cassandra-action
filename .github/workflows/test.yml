@@ -11,6 +11,5 @@ jobs:
       - uses: ./
         with:
           host: ${{ secrets.CASSANDRA_HOST }}
-          port: ${{ secrets.CASSANDRA_PORT }}
           keyspace_name: ${{ secrets.CASSANDRA_KEYSPACE }}
           scripts_path: './'
