@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./
+      - uses: fabasoad/setup-cassandra-action@v1.0.0
         with:
           host: ${{ secrets.CASSANDRA_HOST }}
           keyspace: yf_delete

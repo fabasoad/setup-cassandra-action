@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT exists test_tbl11
+CREATE TABLE IF NOT exists test_tbl134
 (
     price double,
     name text,
