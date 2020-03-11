@@ -50,7 +50,7 @@ jobs:
           port: 9042
           username: ${{ secrets.CASSANDRA_USERNAME }}
           password: ${{ secrets.CASSANDRA_PASSWORD }}
-          keyspace_name: test
+          keyspace: test
           scripts_path: './scripts'
 ```
 

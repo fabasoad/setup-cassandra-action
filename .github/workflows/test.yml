@@ -11,5 +11,5 @@ jobs:
       - uses: ./
         with:
           host: ${{ secrets.CASSANDRA_HOST }}
-          keyspace_name: yf_delete
+          keyspace: yf_delete
           scripts_path: './'
