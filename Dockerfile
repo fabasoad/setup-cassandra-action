@@ -1,6 +1,6 @@
 FROM python:2.7.17-slim-buster
 
-ENV CQLSH_VERSION 5.0.4
+ENV CQLSH_VERSION 3.4.4
 RUN pip install cqlsh==5.0.4
 
 COPY docker-entrypoint.sh /
