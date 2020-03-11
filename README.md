@@ -15,11 +15,11 @@ _[Optional]_ Cassandra port. Default `9042`.
 
 ### `username`
 
-_[Required]_ Cassandra username.
+_[Optional]_ Cassandra username. Default `''`.
 
 ### `password`
 
-_[Required]_ Cassandra password.
+_[Optional]_ Cassandra password. Default `''`.
 
 ### `keyspace`
 

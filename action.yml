@@ -10,10 +10,12 @@ inputs:
     default: 9042
   username:
     description: 'Cassandra username.'
-    required: true
+    required: false
+    default: ''
   password:
     description: 'Cassandra password.'
-    required: true
+    required: false
+    default: ''
   keyspace:
     description: 'Cassandra keyspace. It will be created automatically in case it does not exist.'
     required: true

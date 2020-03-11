@@ -1,0 +1,16 @@
+name: Setup Cassandra
+
+on: push
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: fabasoad/setup-cassandra-action@v1.0.0
+        with:
+          host: ${{ secrets.CASSANDRA_HOST }}
+          port: ${{ secrets.CASSANDRA_PORT }}
+          keyspace_name: ${{ secrets.CASSANDRA_KEYSPACE }}
+          scripts_path: './'
