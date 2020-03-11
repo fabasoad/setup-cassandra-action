@@ -1,7 +1,7 @@
 # Setup Cassandra action
 ![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg)
 
-This GutHub action helps you to setup Cassandra schema.
+This GitHub action helps you to setup Cassandra schema.
 
 ## Inputs
 

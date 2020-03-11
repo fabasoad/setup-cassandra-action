@@ -1,5 +1,8 @@
 name: 'Setup Cassandra Action'
 description: 'Running scripts from the provided folder on top of Cassandra cluster.'
+branding:
+  icon: database
+  color: blue
 inputs:
   host:
     description: 'Cassandra host.'
