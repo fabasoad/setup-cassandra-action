@@ -19,7 +19,7 @@ then
   exit 1
 fi
 for file_script in "$7"/*.cql; do
-  if ! cqlsh -k "$6" -f $file_script "${paramArray[@]}"
+  if ! cqlsh -k "$6" -f "$file_script" "${paramArray[@]}"
   then
     exit 1
   fi
