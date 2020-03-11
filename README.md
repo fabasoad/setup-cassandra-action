@@ -1,5 +1,5 @@
 # Setup Cassandra action
-![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg)
+![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Shell%20Lint/badge.svg) ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
 
 This GitHub action helps you to setup Cassandra schema.
 
