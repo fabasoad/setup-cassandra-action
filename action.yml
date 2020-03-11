@@ -1,0 +1,33 @@
+name: 'Setup Cassandra Action'
+description: 'Running scripts from the provided folder on top of Cassandra cluster.'
+inputs:
+  host:
+    description: 'Cassandra host.'
+    required: true
+  port:
+    description: 'Cassandra port.'
+    required: false
+    default: 9042
+  username:
+    description: 'Cassandra username.'
+    required: true
+  password:
+    description: 'Cassandra password.'
+    required: true
+  keyspace:
+    description: 'Cassandra keyspace. It will be created automatically in case it does not exist.'
+    required: true
+  scripts_path:
+    description: 'Path to the scripts folder with CQL files.'
+    required: true
+    default: './'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.host }}
+    - ${{ inputs.port }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.keyspace }}
+    - ${{ inputs.scripts_path }}
