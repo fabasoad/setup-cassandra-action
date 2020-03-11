@@ -1,4 +1,10 @@
 #!/bin/bash
+echo "var 1: $1"
+echo "var 2: $2"
+echo "var 3: $3"
+echo "var 4: $4"
+echo "var 5: $5"
+echo "var 6: $6"
 paramArray=()
 paramArray+=($1)
 paramArray+=($2)
