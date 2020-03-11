@@ -13,7 +13,7 @@ then
     paramArray+=($4)
 fi
 echo $CQLSH_VERSION
-paramArray+=("--version=\"$CQLSH_VERSION\"")
+paramArray+=("--cqlversion=$CQLSH_VERSION")
 echo "Running: cqlsh ${paramArray[@]}"
 echo "CREATE KEYSPACE IF NOT EXISTS $5 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};" | cqlsh "${paramArray[@]}"
 if [[ $? -ne 0 ]]
