@@ -1,3 +1,4 @@
+---
 name: 'Setup Cassandra Action'
 description: 'Running scripts from the provided folder on top of Cassandra cluster.'
 branding:
