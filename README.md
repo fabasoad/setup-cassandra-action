@@ -1,37 +1,18 @@
 # Setup Cassandra action
-![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Shell%20Lint/badge.svg) ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases) ![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Shell%20Lint/badge.svg)
 
 This GitHub action helps you to setup Cassandra schema.
 
 ## Inputs
-
-### `host`
-
-_[Required]_ Cassandra host.
-
-### `port`
-
-_[Optional]_ Cassandra port. Default `9042`.
-
-### `username`
-
-_[Optional]_ Cassandra username. Default `''`.
-
-### `password`
-
-_[Optional]_ Cassandra password. Default `''`.
-
-### `connect-timeout`
-
-_[Optional]_ Connection timeout to Cassandra in seconds. Default `10`.
-
-### `keyspace`
-
-_[Required]_ Cassandra keyspace. Will be created automatically in case it does not exist.
-
-### `scripts_path`
-
-_[Required]_ Path to the scripts folder.
+| Name            | Required | Description                                                                  | Default       | Possible values |
+|-----------------|----------|------------------------------------------------------------------------------|---------------|-----------------|
+| host            | Yes      | Cassandra host.                                                              |               | &lt;String&gt;  |
+| port            | No       | Cassandra port.                                                              | 9042          | &lt;Number&gt;  |
+| username        | No       | Cassandra username.                                                          | &lt;Empty&gt; | &lt;String&gt;  |
+| password        | No       | Cassandra password.                                                          | &lt;Empty&gt; | &lt;String&gt;  |
+| connect-timeout | No       | Connection timeout to Cassandra in seconds.                                  | 10            | &lt;Number&gt;  |
+| keyspace        | Yes      | Cassandra keyspace. Will be created automatically in case it does not exist. |               | &lt;String&gt;  |
+| scripts_path    | Yes      | Path to the scripts folder.                                                  |               | &lt;Path&gt;    |
 
 ## Example usage
 
