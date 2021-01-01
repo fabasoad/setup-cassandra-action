@@ -1,4 +1,4 @@
-FROM python:2.7.17-slim-buster
+FROM python:2.7.18-alpine
 
 ENV CQLSH_VERSION 3.4.4
 ENV CQLSH_NO_BUNDLED true
