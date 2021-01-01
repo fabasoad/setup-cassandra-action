@@ -7,8 +7,6 @@ on:
       - main
       - 'bugfix/**'
       - 'feature/**'
-    branches-ignore:
-      - main
 
 jobs:
   build:
