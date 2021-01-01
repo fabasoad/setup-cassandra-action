@@ -1,16 +1,18 @@
 # Setup Cassandra action
+
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases) ![YAML Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/YAML%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Shell%20Lint/badge.svg)
 
 This GitHub action helps you to setup Cassandra schema.
 
 ## Inputs
+
 | Name            | Required | Description                                                                  | Default       | Possible values |
 |-----------------|----------|------------------------------------------------------------------------------|---------------|-----------------|
 | host            | Yes      | Cassandra host.                                                              |               | &lt;String&gt;  |
-| port            | No       | Cassandra port.                                                              | 9042          | &lt;Number&gt;  |
+| port            | No       | Cassandra port.                                                              | `9042`        | &lt;Number&gt;  |
 | username        | No       | Cassandra username.                                                          | &lt;Empty&gt; | &lt;String&gt;  |
 | password        | No       | Cassandra password.                                                          | &lt;Empty&gt; | &lt;String&gt;  |
-| connect-timeout | No       | Connection timeout to Cassandra in seconds.                                  | 10            | &lt;Number&gt;  |
+| connect-timeout | No       | Connection timeout to Cassandra in seconds.                                  | `10`          | &lt;Number&gt;  |
 | keyspace        | Yes      | Cassandra keyspace. Will be created automatically in case it does not exist. |               | &lt;String&gt;  |
 | scripts_path    | Yes      | Path to the scripts folder.                                                  |               | &lt;Path&gt;    |
 
@@ -41,4 +43,5 @@ jobs:
 ```
 
 ### Result
+
 ![Result](https://raw.githubusercontent.com/fabasoad/setup-cassandra-action/main/screenshot.png)

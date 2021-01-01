@@ -11,6 +11,7 @@
     "camelcase",
     "ibiqlik",
     "issuehunt",
+    "keyspace",
     "liberapay",
     "yamllint"
   ]
