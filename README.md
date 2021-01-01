@@ -1,6 +1,6 @@
 # Setup Cassandra action
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases) ![Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Lint/badge.svg)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases) ![Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Lint/badge.svg) ![Security tests](https://github.com/fabasoad/setup-cassandra-action/workflows/Security%20tests/badge.svg)
 
 This GitHub action helps you to setup Cassandra schema.
 
