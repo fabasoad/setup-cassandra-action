@@ -44,4 +44,4 @@ jobs:
 
 ### Result
 
-![Result](https://raw.githubusercontent.com/fabasoad/setup-cassandra-action/main/screenshot.png)
+![Result](screenshot.png)

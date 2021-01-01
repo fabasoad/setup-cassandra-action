@@ -15,6 +15,7 @@
     "keyspace",
     "liberapay",
     "markdownlint",
+    "vulns",
     "yamllint"
   ]
 }
