@@ -1,0 +1,23 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "cSpell.words": [
+    "HADOLINT",
+    "appium",
+    "bewuethr",
+    "brainfuck",
+    "briandk",
+    "burdzwastaken",
+    "camelcase",
+    "ibiqlik",
+    "issuehunt",
+    "keyspace",
+    "liberapay",
+    "markdownlint",
+    "semver",
+    "simbo",
+    "vulns",
+    "yamllint"
+  ]
+}
