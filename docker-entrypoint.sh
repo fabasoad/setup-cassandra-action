@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 paramArray=()
 paramArray+=("$1")
 paramArray+=("$2")

@@ -1,39 +1,39 @@
 ---
-name: 'Setup Cassandra Action'
-description: 'Running scripts from the provided folder on top of Cassandra cluster.'
+name: "Setup Cassandra Action"
+description: "Running scripts from the provided folder on top of Cassandra cluster."
 branding:
   icon: database
   color: blue
 inputs:
   host:
-    description: 'Cassandra host.'
+    description: "Cassandra host."
     required: true
   port:
-    description: 'Cassandra port.'
+    description: "Cassandra port."
     required: false
     default: 9042
   username:
-    description: 'Cassandra username.'
+    description: "Cassandra username."
     required: false
-    default: ''
+    default: ""
   password:
-    description: 'Cassandra password.'
+    description: "Cassandra password."
     required: false
-    default: ''
+    default: ""
   connect-timeout:
-    description: 'Connection timeout to Cassandra in seconds.'
+    description: "Connection timeout to Cassandra in seconds."
     required: false
     default: 10
   keyspace:
-    description: 'Cassandra keyspace. It will be created automatically in case it does not exist.'
+    description: "Cassandra keyspace. It will be created automatically in case it does not exist."
     required: true
   scripts_path:
-    description: 'Path to the scripts folder with CQL files.'
+    description: "Path to the scripts folder with CQL files."
     required: true
-    default: './'
+    default: "./"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.host }}
     - ${{ inputs.port }}

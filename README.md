@@ -1,11 +1,14 @@
 # Setup Cassandra action
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases) ![Lint](https://github.com/fabasoad/setup-cassandra-action/workflows/Lint/badge.svg) ![Security tests](https://github.com/fabasoad/setup-cassandra-action/workflows/Security%20tests/badge.svg)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
+![pre-commit](https://github.com/fabasoad/setup-cassandra-action/actions/workflows/pre-commit.yml/badge.svg)
 
 This GitHub action helps you to setup Cassandra schema.
 
 ## Inputs
 
+<!-- prettier-ignore-start -->
 | Name            | Required | Description                                                                  | Default       | Possible values |
 |-----------------|----------|------------------------------------------------------------------------------|---------------|-----------------|
 | host            | Yes      | Cassandra host.                                                              |               | &lt;String&gt;  |
@@ -15,6 +18,7 @@ This GitHub action helps you to setup Cassandra schema.
 | connect-timeout | No       | Connection timeout to Cassandra in seconds.                                  | `10`          | &lt;Number&gt;  |
 | keyspace        | Yes      | Cassandra keyspace. Will be created automatically in case it does not exist. |               | &lt;String&gt;  |
 | scripts_path    | Yes      | Path to the scripts folder.                                                  |               | &lt;Path&gt;    |
+<!-- prettier-ignore-end -->
 
 ## Example usage
 
@@ -30,16 +34,16 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: fabasoad/setup-cassandra-action@v1.0.0
+      - uses: actions/checkout@main
+      - uses: fabasoad/setup-cassandra-action@main
         with:
-          host: '192.13.131.0'
+          host: "192.13.131.0"
           port: 9042
           username: ${{ secrets.CASSANDRA_USERNAME }}
           password: ${{ secrets.CASSANDRA_PASSWORD }}
           connect-timeout: 30
           keyspace: test
-          scripts_path: './scripts'
+          scripts_path: "./scripts"
 ```
 
 ### Result
