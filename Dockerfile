@@ -1,9 +1,9 @@
-FROM python:2.7.18-alpine
+FROM python:3.11-alpine3.19
 
-ENV CQLSH_VERSION 3.4.4
+ENV CQLSH_VERSION 6.1.2
 ENV CQLSH_NO_BUNDLED true
-RUN pip install --no-cache-dir cqlsh==5.0.4 cassandra-driver==3.22.0 \
-    && echo 'export CQLSH_NO_BUNDLED=true' >> ~/.bashrc
+RUN pip install --no-cache-dir cqlsh==${CQLSH_VERSION} cassandra-driver==3.29.0 \
+    && echo "export CQLSH_NO_BUNDLED=${CQLSH_NO_BUNDLED}" >> ~/.bashrc
 
 COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
