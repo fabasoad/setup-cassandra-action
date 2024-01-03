@@ -2,7 +2,7 @@
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
-![pre-commit](https://github.com/fabasoad/setup-cassandra-action/actions/workflows/pre-commit.yml/badge.svg)
+![linting](https://github.com/fabasoad/setup-cassandra-action/actions/workflows/linting.yml/badge.svg)
 
 This GitHub action helps you to setup Cassandra schema.
 
