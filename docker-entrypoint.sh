@@ -5,13 +5,13 @@ paramArray+=("$1")
 paramArray+=("$2")
 if [[ -n "${3/[ ]*\n/}" ]]
 then
-    paramArray+=("-u")
-    paramArray+=("$3")
+  paramArray+=("-u")
+  paramArray+=("$3")
 fi
 if [[ -n "${4/[ ]*\n/}" ]]
 then
-    paramArray+=("-p")
-    paramArray+=("$4")
+  paramArray+=("-p")
+  paramArray+=("$4")
 fi
 paramArray+=("--cqlversion=$CQLSH_VERSION")
 paramArray+=("--connect-timeout=$5")
