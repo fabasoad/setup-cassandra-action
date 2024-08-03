@@ -1,4 +1,6 @@
-# Setup Cassandra action
+# Setup Cassandra Action (Deprecated)
+
+> :warning: **This GitHub action is deprecated and is no longer maintained.**
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
