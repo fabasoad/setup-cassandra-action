@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+msg="fabasoad/setup-cassandra-action GitHub Action is deprecated and no longer"
+msg="${msg} maintained."
+echo "::warning title=Deprecation warning::${msg}"
+
 paramArray=()
 paramArray+=("$1")
 paramArray+=("$2")
