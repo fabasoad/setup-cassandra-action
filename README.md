@@ -1,10 +1,12 @@
-# Setup Cassandra action
+# Setup Cassandra Action (Deprecated)
+
+> :warning: **This GitHub action is deprecated and no longer maintained.**
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/setup-cassandra-action?include_prereleases)
 ![linting](https://github.com/fabasoad/setup-cassandra-action/actions/workflows/linting.yml/badge.svg)
 
-This GitHub action helps you to setup Cassandra schema.
+This GitHub Action helps you to set up Cassandra schema.
 
 ## Inputs
 
@@ -22,8 +24,6 @@ This GitHub action helps you to setup Cassandra schema.
 
 ## Example usage
 
-### Workflow configuration
-
 ```yaml
 name: Setup Cassandra
 
@@ -34,8 +34,8 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: fabasoad/setup-cassandra-action@main
+      - uses: actions/checkout@v4
+      - uses: fabasoad/setup-cassandra-action@v1
         with:
           host: "192.13.131.0"
           port: 9042
@@ -45,7 +45,3 @@ jobs:
           keyspace: test
           scripts_path: "./scripts"
 ```
-
-### Result
-
-![Result](screenshot.png)

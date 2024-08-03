@@ -5,28 +5,37 @@ minimum_pre_commit_version: 2.18.0
 repos:
   # Security
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.4.0
+    rev: v1.5.0
     hooks:
       - id: detect-secrets
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.2
+    rev: v8.18.4
     hooks:
       - id: gitleaks
+  - repo: https://github.com/fabasoad/pre-commit-grype
+    rev: v0.6.0
+    hooks:
+      - id: grype-dir
+        args:
+          - --grype-args=--by-cve --fail-on=low
+          - --hook-args=--log-level debug
+        stages: ["push"]
   # Dockerfile
   - repo: https://github.com/hadolint/hadolint
-    rev: v2.12.1-beta
+    rev: v2.13.0-beta
     hooks:
       - id: hadolint
         stages: ["push"]
   # Shell
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+  - repo: https://github.com/openstack/bashate
+    rev: 2.1.1
     hooks:
-      - id: shellcheck
-        stages: ["push"]
+      - id: bashate
+        args: ["-i", "E003,E006"]
+        stages: ["commit"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.39.0
+    rev: v0.41.0
     hooks:
       - id: markdownlint-fix
         stages: ["commit"]
@@ -38,7 +47,7 @@ repos:
         stages: ["push"]
   # GitHub Actions
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.6.27
+    rev: v1.7.1
     hooks:
       - id: actionlint
         args: ["-pyflakes="]
@@ -52,6 +61,10 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
+      - id: check-executables-have-shebangs
+        stages: ["commit"]
+      - id: check-shebang-scripts-are-executable
+        stages: ["commit"]
       - id: check-merge-conflict
       - id: check-json
         stages: ["push"]
