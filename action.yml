@@ -1,5 +1,5 @@
 ---
-name: "Setup Cassandra Action"
+name: "Setup Cassandra Action (Deprecated)"
 description: "Running scripts from the provided folder on top of Cassandra cluster."
 branding:
   icon: eye-off
