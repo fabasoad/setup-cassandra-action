@@ -27,11 +27,12 @@ repos:
       - id: hadolint
         stages: ["push"]
   # Shell
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+  - repo: https://github.com/openstack/bashate
+    rev: 2.1.1
     hooks:
-      - id: shellcheck
-        stages: ["push"]
+      - id: bashate
+        args: ["-i", "E003,E006"]
+        stages: ["commit"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.41.0
